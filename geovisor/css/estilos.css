@@ -1,0 +1,30 @@
+.icon-ruler {
+    background: url(../icons/ruler.png) no-repeat center center;
+}
+.icon-buscar {
+    background: url(../icons/search.png) no-repeat center center;
+}
+.icon-extensiontotal {
+    background: url(../icons/arrow_inout.png) no-repeat center center;
+}
+.icon-acercar {
+    background: url(../icons/magnifier_zoom_in.png) no-repeat center center;
+}
+.icon-alejar {
+    background: url(../icons/magnifier_zoom_out.png) no-repeat center center;
+}
+.icon-acercarbox {
+    background: url(../icons/magnifier.png) no-repeat center center;
+}
+
+.icon-printer {
+    background: url(../icons/print.png) no-repeat center center;
+}
+
+.icon-area {
+    background: url(../icons/area.png) no-repeat center center;
+}
+
+.icon-about {
+    background: url(../icons/info.png) no-repeat center center;
+}

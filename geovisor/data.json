@@ -1,0 +1,35 @@
+ [
+      {
+        "id": 11,
+        "text": "capas base",
+        "state": "expanded",
+        "children": [
+          {
+            "id": 111,
+            "wms":"http://localhost:8080/geoserver/demo1/wms?",
+            "layer":"demo1:aeropuertos",
+            "text": "aeropuesto"
+          },
+          {
+            "id": 112,
+            "wms":"http://localhost:8080/geoserver/demo1/wms?",
+            "layer":"demo1:CantonesManabi",
+            "text": "cantones"
+          } 
+        ]
+      },
+      {
+        "id": 12,
+        "text": "DPA",
+        "state": "expanded",
+        "children": [
+          {
+            "id": 112,
+            "wms":"http://localhost:8080/geoserver/demo1/wms?",
+            "layer":"demo1:LocalidadesManabi",
+            "text": "Localidades"
+          } 
+        ]
+      } 
+    ]
+  
