@@ -10,7 +10,7 @@ class db
     public $query_count = 0;
     public $MensajeError;
 
-    public function __construct($dbhost = 'localhost', $dbuser = 'root', $dbpass = '', $dbname = 'midefensordb', $charset = 'utf8')
+    public function __construct($dbhost = 'localhost', $dbuser = 'root', $dbpass = '', $dbname = 'oksolu21_visor', $charset = 'utf8')
     {
         $this->connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
         if ($this->connection->connect_error) {

@@ -39,30 +39,13 @@
      session_start();
      unset(  $_SESSION['usuario'] );
      require('db/db.php');
-   
-     $dbhost = 'localhost';
-     $dbuser = 'root';
-     $dbpass = '';
-     $dbname = 'midefensordb';
-     
-     $db = new db($dbhost, $dbuser, $dbpass, $dbname);
-
+     $db = new db();
      $mensaje=" ";
-
        if( isset($_POST["txtcorreo"]) &&  isset($_POST["txtpassword"])   )
         {
             $txtcorreo =   $_POST['txtcorreo'];
-            $txtpassword =  $_POST['txtpassword'];             //echo $txtusuario;   //echo $txtpassword;
-            $sql = "SELECT * FROM  usuario 
-                        where correo='$txtcorreo' and password='$txtpassword' ";
-            //$result = mysqli_query($connection, $sql);
-            $result = new db;
-            if ($result == false) {
-                echo  "Ocurrió un error en la consulta" ;
-               exit;
-            }  
-                     
-            
+            $txtpassword =  $_POST['txtpassword'];
+
             $row = $db->query('SELECT * FROM usuario WHERE correo = ? AND password = ?', $txtcorreo, $txtpassword)->fetchArray();
             //echo  $row['nombre'];
             $resultado = $row['nombre'] ?? '';

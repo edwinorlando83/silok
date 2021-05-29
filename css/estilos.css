@@ -29,7 +29,9 @@
     background: url(../icons/info.png) no-repeat center center;
 }
 
-
+.icono-add {
+    background: url(../icons/add.png) no-repeat center center;
+}
 /*  ----------------------------   otro proyecto*/
 
 .iconoUsuario {

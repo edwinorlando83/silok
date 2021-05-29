@@ -40,10 +40,10 @@
 						<span>Seguridad</span>
 						<ul>
 							<li>
-								   <a  href="main.php?pag=listausuario">  Usuarios  </a> 
+								   <a  href="admin.php?pag=interfaz/agrupaciones">  Agrupaciones  </a> 
 							</li>
 							<li>
-								   <a  href="main.php?pag=usuarios">  Usuarios2  </a> 
+								   <a  href="admin.php?pag=usuarios">  Usuarios2  </a> 
 							</li>
 							<li>
 								<span>Rol de Usuario</span>
@@ -64,6 +64,7 @@
 		if(  isset($_GET["pag"])){
 			$page = $_GET["pag"];	
 			$page = $page.".php";
+		 
 			include ($page);
 		}	
 			?>
