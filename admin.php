@@ -20,7 +20,7 @@
           
  
         <div data-options="region:'north'" style="height:60px"> 
-        <img src="icons/uti-logo.jpg"   height="50px"  > </img>
+        <img src="logos/logo.png"   height="50px"  > </img>
          <div class="titulousuario">
           Usuario: <?php echo $_SESSION['usuario']; ?> 
           <a href="login.php"> Salir </a>
