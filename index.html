@@ -31,8 +31,16 @@
         integrity="sha384-N2S8y7hRzXUPiepaSiUvBH1ZZ7Tc/ZfchhbPdvOE5v3aBBCIepq9l+dBJPFdo1ZJ"
         crossorigin="anonymous"></script>
     <script src="leaflet/L.TileLayer.BetterWMS.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <!-- https://github.com/Leaflet/Leaflet.fullscreen -->
 
-    <style>
+    <script src="leaflet.easyPrint.js"></script>
+    <script src="https://rawgit.com/rowanwins/leaflet-easyPrint/gh-pages/dist/bundle.js"></script>
+    <script src="dist/leaflet-control-boxzoom.js"></script>
+    <link rel="stylesheet" href="dist/leaflet-control-boxzoom.css" />
+    
+   <style>
         body {
             margin: 0;
             padding: 0;
@@ -79,8 +87,7 @@
                     <a href="#" onclick="$('#w').window('open')" class="easyui-linkbutton"   data-options="plain:true,iconCls:'icon-about'"> </a>
                     <a href="#" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-ruler'">Medir</a>
                     <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-buscar'"> Consultar</a>
-                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-printer'"> Imprimir</a>
-    
+                
                     <a href="#" class="easyui-linkbutton" data-options="plain:true"> </a>
                     <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-acercarbox'"> </a>
                     <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-acercar'"> </a>

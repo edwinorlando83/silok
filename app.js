@@ -1,6 +1,6 @@
 
 var mymap = L.map('mapid').setView([-1.2571434, -78.6566384], 12);
-
+let printPlugin;
 L.mapbox.accessToken = 'pk.eyJ1IjoiZWR3aW5vcmxhbmRvIiwiYSI6ImNrNG5jMmh3czBxeTYza3F5a3pvNzRiMTAifQ.EO7KFWuuevdQhwwwQ8rxUA';
 
 
@@ -20,6 +20,18 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.control.scale().addTo(mymap);
 
 
+ 
+
+// or, add to an existing map:
+mymap.addControl(new L.Control.Fullscreen());
+
+this.printPlugin = L.easyPrint({
+    title: 'Mi botón para imprimir', 
+    elementsToHide: 'p, h2, .leaflet-control-zoom'
+}).addTo(mymap);
+
+L.Control.boxzoom({ position:'topleft' }).addTo(mymap);
+
 var options = {
     position: 'topleft',
     lengthUnit: {
@@ -30,25 +42,28 @@ var options = {
 };
 L.control.ruler(options).addTo(mymap);
 
-
-$(document).ready(function () {
-    //   callWS();
-
-
-    /*$("input").click(function (event) {
-
-        let layerClicked = window[event.target.value];
-        console.log(layerClicked);
-        mymap.removeLayer(layerClicked);
-        mymap.addLayer(layerClicked);
-
-    });*/
+ 
+$(document).ready(function () { 
 
 
+ 
+ 
+    $('#tvCapas').tree({
+        onLoadSuccess: function(node, data){   
+          
+            for (let i = 0; i < data.length ; i++)            {
+                for (let j = 0; j < data[i].children.length ; j++){                  
+                    var url = data[i].children[j].imgstyle;
+                   $('<style>.icono-Cantones {  background: url("'+url+'") no-repeat center center; </style>').appendTo('head');    
+  
+                }
+            }  
 
+          
+        }
+    });
 
-
-
+ 
 });
 function addLayes(node) {
     console.log(node);
@@ -108,4 +123,9 @@ function doSearch(value) {
 
     $('#tvCapas').tree('doFilter', value);
 
+    
+}
+
+function imprimir(){
+    printPlugin.printMap('A4Portrait', 'MyFileName');
 }
