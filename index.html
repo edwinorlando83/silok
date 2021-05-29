@@ -66,27 +66,37 @@
 <body>
 
     <div class="easyui-layout" fit="true">
-        <div data-options="region:'north'" style="height:50px">
-            <div class="easyui-panel" style="padding:5px;">
-                <a href="#" onclick="$('#w').window('open')" class="easyui-linkbutton"
-                    data-options="plain:true,iconCls:'icon-about'"> </a>
-                <a href="#" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-ruler'">Medir</a>
-                <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-buscar'"> Consultar</a>
-                <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-printer'"> Imprimir</a>
-
-                <a href="#" class="easyui-linkbutton" data-options="plain:true"> </a>
-                <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-acercarbox'"> </a>
-                <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-acercar'"> </a>
-                <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-alejar'"> </a>
 
 
-                <div id="mm1" style="width:150px;">
-                    <div data-options="iconCls:'icon-area'">Área</div>
-                    <div data-options="iconCls:'icon-ruler'">Lontitud</div>
+        <div data-options="region:'north'" style="height:60px">
 
-                </div>
-
-            </div>
+        <table>
+            <tr>
+                <td style="width:230px;"  >  <img src="logos/logo.png"   height="50px"  > </img>  </td>
+                <td>
+                     <div class="easyui-panel" style="padding:1px;">
+              
+                    <a href="#" onclick="$('#w').window('open')" class="easyui-linkbutton"   data-options="plain:true,iconCls:'icon-about'"> </a>
+                    <a href="#" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-ruler'">Medir</a>
+                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-buscar'"> Consultar</a>
+                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-printer'"> Imprimir</a>
+    
+                    <a href="#" class="easyui-linkbutton" data-options="plain:true"> </a>
+                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-acercarbox'"> </a>
+                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-acercar'"> </a>
+                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-alejar'"> </a>
+    
+    
+                    <div id="mm1" style="width:150px;">
+                        <div data-options="iconCls:'icon-area'">Área</div>
+                        <div data-options="iconCls:'icon-ruler'">Lontitud</div>
+    
+                    </div>
+    
+                </div>  </td>
+            </tr>
+        </table>   
+           
         </div>
         <div data-options="region:'south',split:true" style="height:30px;"> @CopyRigth</div>
 

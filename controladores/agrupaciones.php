@@ -11,7 +11,7 @@ if (!isset($op)) {
 }
 include '../db/db.php';
 require '../utils/auth.php';
-include '../utils.php';
+//include '../utils.php';
 $db = new db();
 
 switch ($op) {

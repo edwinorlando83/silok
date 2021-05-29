@@ -49,7 +49,7 @@
             if (row){
                 $('#dlg').dialog('open').dialog('center').dialog('setTitle','Edit User');
                 $('#fm').form('load',row);
-                url = './controladores/agrupaciones.php?op=insert&&id='+row.id;
+                url = './controladores/agrupaciones.php?op=update&&id='+row.id;
             }
         }
         function saveUser(){
