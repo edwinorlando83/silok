@@ -24,17 +24,18 @@ switch ($op) {
 	//$offset = ($page-1)*$rows;
 	    $result = array();
         $result["total"] = 2;
-        $sql = "select * from agrupacion ";
+        $sql = "select * from usuario ";
         $select = $db->query($sql)->fetchAll();
         $result["rows"] = $select;
         echo json_encode($result);
         break;
 
         case 'insert': 
-            $nombre = $_POST['nombre'];
-            $orden = $_POST['orden'];         
-            $sql = "INSERT INTO  agrupacion (nombre, orden ) VALUES( ?,?)";    
-            $insert = $db->query($sql, $nombre, $orden );
+            $correo = $_POST['correo'];
+            $nombre = $_POST['nombre'];         
+            $password = $_POST['password'];         
+            $sql = "INSERT INTO  usuario (correo, nombre, password ) VALUES( ?,?,?)";    
+            $insert = $db->query($sql, $correo, $nombre, $password);
             if ($db->MensajeError) {
                 $pos = strpos($db->MensajeError, "Duplicate entry");
                 if ($pos === false) {
@@ -46,9 +47,10 @@ switch ($op) {
             } else {   
 
                 echo json_encode(array(
-                    'id' =>  $insert->lastInsertID(),
+                   // 'password' =>  $insert->lastInsertID(),
+                    'correo' => $correo,
                     'nombre' => $nombre,
-                    'orden' => $orden                    
+                    'password' => $password
                 ));
 
             }
@@ -57,24 +59,24 @@ switch ($op) {
         break;
  
         case 'update': 
-            $nombre = $_POST['nombre'];
-            $orden = $_POST['orden'];   
-            $id = $_GET['id'];         
-            $sql = "update agrupacion set  nombre=?, orden=? where id =? ";    
-            $update = $db->query($sql, $nombre, $orden ,$id );
+            $correo     = $_POST['correo'];
+            $nombre     = $_POST['nombre'];   
+            $password   = $_POST['password'];         
+            $sql = "update usuario set  correo=?, nombre=? where password =? ";    
+            $update = $db->query($sql, $correo, $nombre ,$password );
               echo json_encode(array(
-                    'id' =>  $id,
-                    'nombre' => $nombre,
-                    'orden' => $orden                    
+                    'password'  =>  $password,
+                    'correo'    => $correo,
+                    'nombre'    => $nombre                    
                 ));
  
         break;
 
         case 'delete': 
     
-            $id = $_REQUEST['id'];         
-            $sql = "delete FROM agrupacion  where id =? ";    
-            $delete = $db->query($sql, $id );
+            $password = $_REQUEST['password'];         
+            $sql = "delete FROM usuario  where password =? ";    
+            $delete = $db->query($sql, $password );
             if ($db->MensajeError) {
                 echo json_encode($db->MensajeError);
             }

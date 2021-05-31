@@ -32,6 +32,14 @@
 .icono-add {
     background: url(../icons/add.png) no-repeat center center;
 }
+
+.icono-edit {
+    background: url(../icons/edit.png) no-repeat center center;
+}
+.icono-remove {
+    background: url(../icons/remove.png) no-repeat center center;
+}
+
 /*  ----------------------------   otro proyecto*/
 
 .iconoUsuario {

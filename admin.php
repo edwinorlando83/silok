@@ -42,18 +42,14 @@
 							<li>
 								   <a  href="admin.php?pag=interfaz/agrupaciones">  Agrupaciones  </a> 
 							</li>
-							<li>
-								   <a  href="admin.php?pag=usuarios">  Usuarios2  </a> 
+							<li>						
+									<a  href="admin.php?pag=interfaz/usuarios_adm">  Usuarios Adm  </a> 
 							</li>
 							<li>
-								<span>Rol de Usuario</span>
+									<a  href="admin.php?pag=interfaz/usuarios">  Usuarios  </a> 
 							</li>
-							 
 						</ul>
 					</li>
-				 l>
-					</li>
-					 
 				</ul>
 			</li>
 		</ul>

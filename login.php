@@ -11,6 +11,8 @@
     <script type="text/javascript" src="jquery-easyui-1.9.14/locale/easyui-lang-es.js"></script>
     
 </head>
+
+
 <body class="easyui-layout">
 <div class="titulo"> 
 	   Sistema Integrado para Administración 
@@ -31,8 +33,16 @@
           
         </form>
         <div style="text-align:center;padding:5px 0">
-         <button class="easyui-linkbutton"  type="submit" form="ff" value="Continue" style="width:80px" >Login</button>
+        <button class="easyui-linkbutton"  type="submit" form="ff" value="Continue" style="width:80px" >Login</button>
+
+        
+
         </div>
+        
+    
+       
+         
+
 	</div> 
 
     <?php 
@@ -63,6 +73,8 @@
 
 
     ?>
+
+    
     <div> <?php  echo  $mensaje;?>   </div>
     </center>
     <script>
