@@ -16,8 +16,8 @@
     </table>
     <div id="toolbar">
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icono-add" plain="true" onclick="newUser()">Agregar</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Modificar</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Eliminar</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icono-edit" plain="true" onclick="editUser()">Modificar</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icono-remove" plain="true" onclick="destroyUser()">Eliminar</a>
     </div>
     
     <div id="dlg" class="easyui-dialog" style="width:400px" data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'">

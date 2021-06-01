@@ -34,10 +34,10 @@
 }
 
 .icono-edit {
-    background: url(../icons/edit.png) no-repeat center center;
+    background: url(../icons/editar.png) no-repeat center center;
 }
 .icono-remove {
-    background: url(../icons/remove.png) no-repeat center center;
+    background: url(../icons/borrar.png) no-repeat center center;
 }
 
 /*  ----------------------------   otro proyecto*/
