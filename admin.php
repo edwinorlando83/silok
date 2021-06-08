@@ -37,7 +37,7 @@
 				<span>Menu</span>
 				<ul>
 					<li>
-						<span>Pagina de Seguridad</span>
+						<span>Pagina de Seguridad 123</span>
 						<ul>
 							<li>
 								   <a  href="admin.php?pag=interfaz/agrupaciones">  Agrupaciones  </a> 
