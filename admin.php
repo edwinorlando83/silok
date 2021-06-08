@@ -45,6 +45,9 @@
 							<li>
 								   <a  href="admin.php?pag=interfaz/configuraciones">  Configuraciones  </a> 
 							</li>
+							<li>
+								   <a  href="admin.php?pag=interfaz/configuracionesGrid">  Configuraciones Grid  </a> 
+							</li>
 							<li>						
 									<a  href="admin.php?pag=interfaz/usuarios_adm">  Usuarios Adm  </a> 
 							</li>

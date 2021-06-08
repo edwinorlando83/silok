@@ -15,19 +15,44 @@ require '../utils/auth.php';
 $db = new db();
 
 switch ($op) {
- 
- 
-    case 'select':
+    
+        case 'select_plus1':
 
-   //$page = isset($_POST['page']) ? intval($_POST['page']) : 1;
-	//$rows = isset($_POST['rows']) ? intval($_POST['rows']) : 10;
-	//$offset = ($page-1)*$rows;
-	    $result = array();
-        $result["total"] = 2;
-        $sql        = "select * from configuraciones ";
-        $select     = $db->query($sql)->fetchAll();
-        $result["rows"] = $select;
-        echo json_encode($result);
+            //$page = isset($_POST['page']) ? intval($_POST['page']) : 1;
+            //$rows = isset($_POST['rows']) ? intval($_POST['rows']) : 10;
+            //$offset = ($page-1)*$rows;
+            $result = array();
+            
+            $result["totales"] = 2;
+            $sql        = "select * from configuraciones";
+            $select     = $db->query($sql)->fetchAll();
+           
+            $result["rows"] = $select;    
+             /* cargar datos 
+                    var row = { 
+                    nombre : 'AddName' ,
+                    valor : '' ,
+                    grupo : 'Configuración de marketing' ,
+                    editor : 'texto'
+                    };
+                    $ ( '#pg' ). propertygrid ( 'appendRow' , fila );             
+             */
+                    
+            echo json_encode($result);
+        break;
+
+
+        case 'select':
+
+            //$page = isset($_POST['page']) ? intval($_POST['page']) : 1;
+	        //$rows = isset($_POST['rows']) ? intval($_POST['rows']) : 10;
+	        //$offset = ($page-1)*$rows;
+	        $result = array();
+            $result["total"] = 2;
+            $sql        = "select * from configuraciones22 ";
+            $select     = $db->query($sql)->fetchAll();
+            $result["rows"] = $select;
+            echo json_encode($result);
         break;
 
         case 'insert': 
@@ -59,7 +84,49 @@ switch ($op) {
  
 
         break;
- 
+ // controlador
+case 'update_plus': 
+    $datos = $_POST['datos'];
+    
+    //echo($datos); 
+    //echo(" ----> ");
+    $array = explode(",", $datos);
+    
+    for ($i = 0; $i < count($array); $i++) {
+        //echo $i;
+
+       
+        $cadena = $array[$i];
+        $dato = explode(":",$cadena);
+         
+        //echo($array[0]);
+
+
+        $nombre = $dato[0];
+        $valor  = $dato[1];  
+
+        /* 
+        echo("\n");
+        echo ("nombre   :".$nombre.", ");          
+        echo ("valor    :".$valor);
+       */
+
+        if (isset($nombre) && isset($valor)){
+            //echo ("ok");
+            //$sql = "update configuraciones set  geoserver=?, geoserver_user=?, geoserver_pass=?, wms=? where id =? ";    
+            $sql = "update configuraciones set  valor=? where nombre=? ";    
+            $update = $db->query($sql, $valor, $nombre);
+            echo json_encode(array(
+                    'nombre'    => $nombre,
+                    'valor'     => $valor
+                ));
+        } else {
+            //echo ("error");
+        }
+    }
+     
+    break;  
+
         case 'update': 
             $geoserver      = $_POST['geoserver'];
             $geoserver_user = $_POST['geoserver_user'];   
