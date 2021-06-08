@@ -24,16 +24,16 @@
         <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
             <h3>usuarios Información</h3>
             <div style="margin-bottom:10px">
-                <input name="geoserver" class="easyui-textbox"  required="true" label="geoserver:" style="width:100%">
+                <input name="geoserver" class="easyui-textbox"  required="true" label="geoserver :" style="width:100%">
             </div>
             <div style="margin-bottom:10px">
-                <input name="geoserver_user" class="easyui-textbox" required="true" label="geoserver_user:" style="width:100%">
+                <input name="geoserver_user" class="easyui-textbox" required="true" label="geoserver_user :" style="width:100%">
             </div>
             <div style="margin-bottom:10px">
-                <input name="geoserver_pass" class="easyui-textbox"  required="true" label="geoserver_pass:" style="width:100%">
+                <input name="geoserver_pass" class="easyui-textbox"  required="true" label="geoserver_pass :" style="width:100%">
             </div>
             <div style="margin-bottom:10px">
-                <input name="wms" class="easyui-textbox"  required="true" label="wms:" style="width:100%">
+                <input name="wms" class="easyui-textbox"  required="true" label="wms :" style="width:100%">
             </div>
         </form>
     </div>
