@@ -41,11 +41,9 @@ var options = {
     }
 };
 L.control.ruler(options).addTo(mymap);
-
  
+mymap.setView(new L.LatLng(-0.754412314580493, -80.150422059634266), 8);
 $(document).ready(function () { 
-
-
  
  
     $('#tvCapas').tree({
@@ -88,11 +86,20 @@ function agregarCapa(wms, capa) {
           format: 'image/png',
       }).addTo(mymap);*/
 
-    L.tileLayer.betterWms(wms, {
+  var  layer=  L.tileLayer.betterWms(wms, {
         layers: capa,
         transparent: true,
         format: 'image/png'
     }).addTo(mymap);
+/*
+    var p1 = L.point(layer._crs.projection.bounds.min.x, layer._crs.projection.bounds.min.y);
+    var p2 = L.point(layer._crs.projection.bounds.max.x, layer._crs.projection.bounds.max.y);
+    var bounds = L.bounds(p1, p2);
+    console.log(layer._crs.projection.bounds ); 
+    console.log(layer._crs.projection.bounds.min.x ); 
+    
+    mymap.fitBounds(bounds);*/
+
 
 }
 function removerCapa(capa) {

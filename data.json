@@ -65,7 +65,7 @@
           } 
           ,
           {
-            "id": 6,
+            "id": 76,
             "wms":"http://51.79.67.52:8080/geoserver/sil/wms?",
             "layer":"sil:ZonasManabi",
             "text": "Zonas",
