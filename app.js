@@ -3,12 +3,13 @@ var mymap = L.map('mapid').setView([-1.2571434, -78.6566384], 12);
 let printPlugin;
 L.mapbox.accessToken = 'pk.eyJ1IjoiZWR3aW5vcmxhbmRvIiwiYSI6ImNrNG5jMmh3czBxeTYza3F5a3pvNzRiMTAifQ.EO7KFWuuevdQhwwwQ8rxUA';
 
+/*
 
 var mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
     attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     tileSize: 512,
     zoomOffset: -1
-}).addTo(mymap);
+}).addTo(mymap);*/
 
 
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
