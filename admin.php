@@ -37,10 +37,16 @@
 				<span>Menu</span>
 				<ul>
 					<li>
-						<span>Seguridad</span>
+						<span>Pagina de Seguridad 123</span>
 						<ul>
-							<li>
+						<li>
 								   <a  href="admin.php?pag=interfaz/agrupaciones">  Agrupaciones  </a> 
+							</li>
+							<li>
+								   <a  href="admin.php?pag=interfaz/configuraciones">  Configuraciones  </a> 
+							</li>
+							<li>
+								   <a  href="admin.php?pag=interfaz/configuracionesGrid">  Configuraciones Grid  </a> 
 							</li>
 							<li>						
 									<a  href="admin.php?pag=interfaz/usuarios_adm">  Usuarios Adm  </a> 
