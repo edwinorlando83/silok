@@ -137,3 +137,24 @@ function doSearch(value) {
 function imprimir(){
     printPlugin.printMap('A4Portrait', 'MyFileName');
 }
+
+function filtarCQL(){
+    
+   var wmsLayer = new L.TileLayer.WMS('http://51.79.67.52:8080/geoserver/sil/wms?', {
+        layers: 'sil:LocalidadesManabi',
+        format: 'image/png',
+        transparent: true,
+        version: '1.3.0',
+       // crs: L.CRS.EPSG4326,
+     
+        zoom: 16,
+        // set deafult cql_filter
+        cql_filter : "dpa_desloc='ANDIL'" 
+    }).addTo(mymap);
+ 
+ 
+   
+ 
+
+
+}

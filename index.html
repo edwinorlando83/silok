@@ -85,13 +85,10 @@
                      <div class="easyui-panel" style="padding:1px;">
             
                     <a href="#" onclick="$('#w').window('open')" class="easyui-linkbutton"   data-options="plain:true,iconCls:'icon-about'"> </a>
-                <!--       <a href="#" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-ruler'">Medir</a>
-                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-buscar'"> Consultar</a>
+                    <a href="#" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-ruler'">Medir</a>
+                    <a href="#" onclick="$('#w2').window('open')" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-buscar'"> Buscar en Capas</a>
                 
-                    <a href="#" class="easyui-linkbutton" data-options="plain:true"> </a>
-                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-acercarbox'"> </a>
-                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-acercar'"> </a>
-                    <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-alejar'"> </a>
+                   
     
     
                     <div id="mm1" style="width:150px;">
@@ -99,7 +96,7 @@
                         <div data-options="iconCls:'icon-ruler'">Lontitud</div>
     
                     </div>
-    -->
+     
                 </div>  </td>
             </tr>
         </table>   
@@ -119,12 +116,31 @@
                 <div data-options="region:'center',title:'CARTOGRAFIA' ">
 
 
-                    <ul class="easyui-tree" id="tvCapas" data-options="url:'data.json',method:'get',checkbox:true,animate:true,lines:true, onCheck: function(node){
-                        addLayes(node);
-                    }"></ul>
+                    <div class="easyui-accordion" style="width:100%;height:100%">
+                        <div title="DPA"   style="overflow:auto;padding:10px;">
 
+                            <ul class="easyui-tree" id="tvCapas" data-options="url:'data.json',method:'get',checkbox:true,animate:true,lines:true, onCheck: function(node){
+                                addLayes(node);
+                            }"></ul>
+        
+                         </div>
+
+                         <div title="Mapas Temáticos"   style="overflow:auto;padding:10px;">
+
+                            <ul class="easyui-tree" id="tvCapas" data-options="url:'data2.json',method:'get',checkbox:true,animate:true,lines:true, onCheck: function(node){
+                                addLayes(node);
+                            }"></ul>
+                        </div>
+
+                     </div>
+
+                
 
                 </div>
+
+
+                
+                
 
                 <div data-options="region:'south',split:false" style="height:80px;">
 
@@ -166,8 +182,84 @@
         Descripción
         Sistema de Información Local, Gobierno Autónomo Descentralizado Provincial de Manabí  
     </div>
+    <div id="w2" class="easyui-window" title="Buscar Parroquias" 
+     data-options="modal:true,closed:true,iconCls:'icon-about',minimizable:false,maximizable:false,collapsible:false,border:'thin',cls:'c5'" style="width:500px;height:200px;padding:10px;">
+        
+        <select class="easyui-combobox" name="Parroquia" label="State:" labelPosition="top" style="width:100%;">
+            <option value="10 DE AGOSTO">10 DE AGOSTO</option>
+            <option value="12 DE OCTUBRE">12 DE OCTUBRE</option>
+            <option value="12 HERMANOS">12 HERMANOS</option>
+            <option value="4 CAMINOS">4 CAMINOS</option>
+            <option value="4 ESQUINAS">4 ESQUINAS</option>
+            <option value="5 DE JUNIO">5 DE JUNIO</option>
+            <option value="6 DE ENERO">6 DE ENERO</option>
+            <option value="8 DE DICIEMBRE">8 DE DICIEMBRE</option>
+            <option value="9 DE OCTUBRE">9 DE OCTUBRE</option>
+            <option value="ABRETONES">ABRETONES</option>
+            <option value="ACHIOTE">ACHIOTE</option>
+            <option value="AGUA AMARGA">AGUA AMARGA</option>
+            <option value="AGUA BLANCA">AGUA BLANCA</option>
+            <option value="AGUA CLARA">AGUA CLARA</option>
+            <option value="AGUA DULCE DE ADENTRO">AGUA DULCE DE ADENTRO</option>
+            <option value="AGUA DULCE DE AFUERA">AGUA DULCE DE AFUERA</option>
+            <option value="AGUA DULCE DE EN MEDIO">AGUA DULCE DE EN MEDIO</option>
+            <option value="AGUA DULCE DEL SALITRE">AGUA DULCE DEL SALITRE</option>
+            <option value="AGUA DULCE">AGUA DULCE</option>
+            <option value="AGUA FRIA ARRIBA">AGUA FRIA ARRIBA</option>
+            <option value="AGUA FRIA DE ABAJO">AGUA FRIA DE ABAJO</option>
+            <option value="AGUA FRIA DE ADENTRO">AGUA FRIA DE ADENTRO</option>
+            <option value="AGUA FRIA DE AFUERA">AGUA FRIA DE AFUERA</option>
+            <option value="AGUA FRIA DE ARRIBA">AGUA FRIA DE ARRIBA</option>
+            <option value="AGUA FRIA DE EN MEDIO">AGUA FRIA DE EN MEDIO</option>
+            <option value="AGUA FRIA EN MEDIO">AGUA FRIA EN MEDIO</option>
+            <option value="AGUA FRIA SECTOR LA CAPILLA">AGUA FRIA SECTOR LA CAPILLA</option>
+            <option value="AGUA FRIA">AGUA FRIA</option>
+            <option value="AGUA PADRE">AGUA PADRE</option>
+            <option value="AGUA PATO">AGUA PATO</option>
+            <option value="AGUA SABROSA">AGUA SABROSA</option>
+            <option value="AGUA SUCIA">AGUA SUCIA</option>
+            <option value="AGUACATAL">AGUACATAL</option>
+            <option value="AGUACATE (ÑAUCE)">AGUACATE (ÑAUCE)</option>
+            <option value="AGUACATE">AGUACATE</option>
+            <option value="AGUALAN">AGUALAN</option>
+            <option value="AGUAS AMARGAS">AGUAS AMARGAS</option>
+            <option value="AGUAS BLANCAS">AGUAS BLANCAS</option>
+            <option value="AGUAS CLARAS">AGUAS CLARAS</option>
+            <option value="AGUAS COLORADAS">AGUAS COLORADAS</option>
+            <option value="AGUAS FRIAS">AGUAS FRIAS</option>
+            <option value="AGUAS MUERTAS">AGUAS MUERTAS</option>
+            <option value="AGUAS NEGRAS">AGUAS NEGRAS</option>
+            <option value="AGUAS NUEVAS">AGUAS NUEVAS</option>
+            <option value="AGUAS TURBIAS">AGUAS TURBIAS</option>
+            <option value="AGUILA">AGUILA</option>
+            <option value="ALBAJACAL">ALBAJACAL</option>
+            <option value="ALCANCIA">ALCANCIA</option>
+            <option value="ALEJANDRINO VELASCO">ALEJANDRINO VELASCO</option>
+            <option value="ALEJO LASCANO">ALEJO LASCANO</option>
+            <option value="ALGODONES ADENTRO">ALGODONES ADENTRO</option>
+            <option value="ALIANZA">ALIANZA</option>
+            <option value="ALTAMIRA">ALTAMIRA</option>
+            <option value="ALTO GRANDE">ALTO GRANDE</option>
+            <option value="AMANCAY">AMANCAY</option>
+            <option value="AMARIS">AMARIS</option>
+            <option value="AMBACHE">AMBACHE</option>
+            <option value="ANDARIELE ADENTRO">ANDARIELE ADENTRO</option>
+            <option value="ANDARIELES">ANDARIELES</option>
+            <option value="ANDIL">ANDIL</option>
+            <option value="ANDRECILLO DE ABAJO">ANDRECILLO DE ABAJO</option>
+            <option value="ANDRECILLO">ANDRECILLO</option>
+            <option value="ANEGADO">ANEGADO</option>
+            <option value="ARAGUNDI">ARAGUNDI</option>
+        </select>    
 
+         
+        <div data-options="region:'south',border:false" style="text-align:right;padding:5px 0 0;">
+            <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" onclick="filtarCQL()" style="width:80px">Ok</a>
+   
+        </div>
+    </div>
     <script src="app.js"></script>
+ 
 </body>
 
 </html>
